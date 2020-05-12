@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		FAA0E4EE243F38EF006BAAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA0E4EC243F38EF006BAAED /* Main.storyboard */; };
 		FAA0E4F0243F38F2006BAAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA0E4EF243F38F2006BAAED /* Assets.xcassets */; };
 		FAA0E4F3243F38F2006BAAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA0E4F1243F38F2006BAAED /* LaunchScreen.storyboard */; };
+		FAA0E4FC243F3960006BAAED /* Web3PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAA0E4FB243F3960006BAAED /* Web3PromiseKit */; };
+		FAA0E4FE243F3960006BAAED /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = FAA0E4FD243F3960006BAAED /* Web3ContractABI */; };
+		FAA0E500243F3960006BAAED /* Web3 in Frameworks */ = {isa = PBXBuildFile; productRef = FAA0E4FF243F3960006BAAED /* Web3 */; };
+		FAA0E502243F3DD4006BAAED /* contractAbi.json in Resources */ = {isa = PBXBuildFile; fileRef = FAA0E501243F3DD4006BAAED /* contractAbi.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,7 @@
 		FAA0E4EF243F38F2006BAAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA0E4F2243F38F2006BAAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA0E4F4243F38F2006BAAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA0E501243F3DD4006BAAED /* contractAbi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contractAbi.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA0E500243F3960006BAAED /* Web3 in Frameworks */,
+				FAA0E4FE243F3960006BAAED /* Web3ContractABI in Frameworks */,
+				FAA0E4FC243F3960006BAAED /* Web3PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 		FAA0E4E5243F38EF006BAAED /* Case2-Boilertalk-SPM */ = {
 			isa = PBXGroup;
 			children = (
+				FAA0E501243F3DD4006BAAED /* contractAbi.json */,
 				FAA0E4E6243F38EF006BAAED /* AppDelegate.swift */,
 				FAA0E4E8243F38EF006BAAED /* SceneDelegate.swift */,
 				FAA0E4EA243F38EF006BAAED /* ViewController.swift */,
@@ -83,6 +92,11 @@
 			dependencies = (
 			);
 			name = "Case2-Boilertalk-SPM";
+			packageProductDependencies = (
+				FAA0E4FB243F3960006BAAED /* Web3PromiseKit */,
+				FAA0E4FD243F3960006BAAED /* Web3ContractABI */,
+				FAA0E4FF243F3960006BAAED /* Web3 */,
+			);
 			productName = "Case2-Boilertalk-SPM";
 			productReference = FAA0E4E3243F38EF006BAAED /* Case2-Boilertalk-SPM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = FAA0E4DA243F38EF006BAAED;
+			packageReferences = (
+				FAA0E4FA243F3960006BAAED /* XCRemoteSwiftPackageReference "Web3" */,
+			);
 			productRefGroup = FAA0E4E4243F38EF006BAAED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +144,7 @@
 			files = (
 				FAA0E4F3243F38F2006BAAED /* LaunchScreen.storyboard in Resources */,
 				FAA0E4F0243F38F2006BAAED /* Assets.xcassets in Resources */,
+				FAA0E502243F3DD4006BAAED /* contractAbi.json in Resources */,
 				FAA0E4EE243F38EF006BAAED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +356,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAA0E4FA243F3960006BAAED /* XCRemoteSwiftPackageReference "Web3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boilertalk/Web3.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAA0E4FB243F3960006BAAED /* Web3PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA0E4FA243F3960006BAAED /* XCRemoteSwiftPackageReference "Web3" */;
+			productName = Web3PromiseKit;
+		};
+		FAA0E4FD243F3960006BAAED /* Web3ContractABI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA0E4FA243F3960006BAAED /* XCRemoteSwiftPackageReference "Web3" */;
+			productName = Web3ContractABI;
+		};
+		FAA0E4FF243F3960006BAAED /* Web3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA0E4FA243F3960006BAAED /* XCRemoteSwiftPackageReference "Web3" */;
+			productName = Web3;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAA0E4DB243F38EF006BAAED /* Project object */;
 }
